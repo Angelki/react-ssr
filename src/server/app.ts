@@ -1,8 +1,10 @@
 import Koa from 'koa';
+import koaStatic from 'koa-static';
 
 const app = new Koa();
-const port = process.env.PORT ?? 5000;
+const port = process.env.PORT || 5000;
 
+app.use(koaStatic('public'));
 app.use((ctx) => {
     ctx.body = `
   <!DOCTYPE html>
@@ -17,7 +19,6 @@ app.use((ctx) => {
     <script src="bundle.js"></script>
 </body>
 </html>
-
 `;
 });
 
