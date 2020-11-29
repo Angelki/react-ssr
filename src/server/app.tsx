@@ -1,11 +1,15 @@
 import Koa from 'koa';
 import koaStatic from 'koa-static';
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import App from '../shared/app';
 
 const app = new Koa();
 const port = process.env.PORT || 5000;
 
 app.use(koaStatic('public'));
 app.use((ctx) => {
+    const content = ReactDOMServer.renderToString(<App />);
     ctx.body = `
   <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +19,7 @@ app.use((ctx) => {
     <title>server</title>
 </head>
 <body>
-    <div id="root"></div>
-    <script src="bundle.js"></script>
+    <div id="root">${content}</div>
 </body>
 </html>
 `;
