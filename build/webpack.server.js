@@ -3,6 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     mode: 'development',
+    // 如果要打包nodejs环境下的包就需要指定target为node
     target: 'node',
     entry: path.join(__dirname, '../src/server/app.tsx'),
     output: {
