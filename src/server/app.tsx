@@ -1,6 +1,7 @@
 import Koa from 'koa';
 import koaStatic from 'koa-static';
 import React from 'react';
+import { StaticRouter } from 'react-router-dom';
 import ReactDOMServer from 'react-dom/server';
 import App from '../shared/app';
 
@@ -9,7 +10,11 @@ const port = process.env.PORT || 5000;
 
 app.use(koaStatic('public'));
 app.use((ctx) => {
-    const content = ReactDOMServer.renderToString(<App />);
+    const content = ReactDOMServer.renderToString(
+        <StaticRouter location={ctx.req.url}>
+            <App />
+        </StaticRouter>,
+    );
     ctx.body = `
 <!DOCTYPE html>
 <html lang="en">
