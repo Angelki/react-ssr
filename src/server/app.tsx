@@ -11,7 +11,7 @@ app.use(koaStatic('public'));
 app.use((ctx) => {
     const content = ReactDOMServer.renderToString(<App />);
     ctx.body = `
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
