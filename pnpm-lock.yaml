@@ -1,6 +1,8 @@
 dependencies:
+  '@koa/router': 10.0.0
   '@types/koa': 2.11.6
   '@types/koa-static': 4.0.1
+  '@types/koa__router': 8.0.3
   '@types/react-router-dom': 5.1.6
   axios: 0.21.1
   koa: 2.13.0
@@ -316,6 +318,18 @@ packages:
       node: '>=10.0.0'
     resolution:
       integrity: sha512-HyYEUDeIj5rRQU2Hk5HTB2uHsbRQpF70nvMhVzi+VJR0X+xNEhjPui4/kBf3VeH/wqD28PT4sVOm8qqLjBrSZg==
+  /@koa/router/10.0.0:
+    dependencies:
+      debug: 4.3.1
+      http-errors: 1.8.0
+      koa-compose: 4.1.0
+      methods: 1.1.2
+      path-to-regexp: 6.2.0
+    dev: false
+    engines:
+      node: '>= 8.0.0'
+    resolution:
+      integrity: sha512-z9ytrKWn/j/qUApMSJzZbUwkbLcN2ZXGq6UsqWkZb50Us+/Qpu0RwgZ6ytawVOhfFBZ1ai5iVWeD2Dcu0qcnJw==
   /@types/accepts/1.3.5:
     dependencies:
       '@types/node': 14.14.16
@@ -435,6 +449,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-BhyrMj06eQkk04C97fovEDQMpLpd2IxCB4ecitaXwOKGq78Wi2tooaDOWOFGajPk8IkQOAtMppApgSVkYe1F/A==
+  /@types/koa__router/8.0.3:
+    dependencies:
+      '@types/koa': 2.11.6
+    dev: false
+    resolution:
+      integrity: sha512-eS8K49z1x6OaW1ha61kRksVo42L5DWdQUA3kVpH1Kz6TuKBlG0ri42ELA4zSh+xg+6fAqjfuWA7bfNvwVMNXQA==
   /@types/mime/2.0.3:
     dev: false
     resolution:
@@ -1712,6 +1732,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==
+  /methods/1.1.2:
+    dev: false
+    engines:
+      node: '>= 0.6'
+    resolution:
+      integrity: sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=
   /mime-db/1.44.0:
     engines:
       node: '>= 0.6'
@@ -1925,6 +1951,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
+  /path-to-regexp/6.2.0:
+    dev: false
+    resolution:
+      integrity: sha512-f66KywYG6+43afgE/8j/GoiNyygk/bnoCbps++3ErRKsIYkGGupyv07R2Ok5m9i67Iqc+T2g1eAUGUPzWhYTyg==
   /path-type/1.1.0:
     dependencies:
       graceful-fs: 4.2.4
@@ -2673,8 +2703,10 @@ specifiers:
   '@babel/core': ^7.12.9
   '@babel/preset-react': ^7.12.7
   '@babel/preset-typescript': ^7.12.7
+  '@koa/router': ^10.0.0
   '@types/koa': ^2.11.6
   '@types/koa-static': ^4.0.1
+  '@types/koa__router': ^8.0.3
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
   '@types/react-router-dom': ^5.1.6
@@ -2682,8 +2714,8 @@ specifiers:
   babel-loader: ^8.2.2
   koa: ^2.13.0
   koa-static: ^5.0.0
-  react: ^17.0.1
-  react-dom: ^17.0.1
+  react: 17.0.1
+  react-dom: 17.0.1
   react-router-dom: ^5.2.0
   ts-node: ^9.0.0
   ts-node-dev: ^1.0.0
